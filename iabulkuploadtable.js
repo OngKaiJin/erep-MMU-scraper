@@ -44,7 +44,7 @@ function iabulkuptable(jsonfile,loadfrom) {
         for (var p=0; p < maxcolumncopyright_holders; p++) {
             list += ",copyright_holder[" + p + "]";
         }
-        list += ",collection";
+        list += ",collection[0],collection[1]";
         for (var i=0; i < total; i++) {
             if (content[i].hasOwnProperty("documents")) {
                 for (var j=0; j < content[i].documents.length; j++) {
@@ -112,7 +112,7 @@ function iabulkuptable(jsonfile,loadfrom) {
                                         }
                                     }
                                 }
-                                link += ",opensource";
+                                link += ",shdl,additional_collections";
                             }
                             if (content[i].documents[j].hasOwnProperty("language")) {
                                 if (content[i].documents[j].language != "en") {
